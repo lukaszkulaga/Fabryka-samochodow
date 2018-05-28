@@ -8,9 +8,47 @@
 </head>
 <body>
 
+
+
+
+
+
+
 	<form action="raceCar.jsp" method="post">
-		<input type="submit" value="build RACE CAR">
+	
+	
+	
+	
+	<p>choose durability tire </p>
+<input type="radio" name="durabilityTire" value="80" />80<br />
+<input type="radio" name="durabilityTire" value="90" />90<br />
+<input type="radio" name="durabilityTire" value="100" />100<br/>
+
+
+<p>choose type tire </p>
+<input type="radio" name="typeTire" value="a1" />a1<br />
+<input type="radio" name="typeTire" value="a2" />a2<br />
+<input type="radio" name="typeTire" value="a3" />a3<br/>
+
+
+<p>choose type engine </p>
+<input type="radio" name="typeEngine" value="v4" />v4<br />
+<input type="radio" name="typeEngine" value="v5" />v5<br />
+<input type="radio" name="typeEngine" value="v6" />v6<br/>
+	
+	
+	
+		<input type="submit" value="build race car">
 	</form>
+
+	<form action="buildCar.html" method="post">
+		<input type="submit" value="back">
+	</form>
+
+	<form action="index.html" method="post">
+		<input type="submit" value="home page">
+	</form>
+
 
 
 </body>

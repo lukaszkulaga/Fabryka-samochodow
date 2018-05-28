@@ -3,7 +3,6 @@
 <%@page import="BuildCars.Engine" %>
 <%@page import="BuildCars.Tires" %>
 <%@page import="BuildCars.CarBuilder" %>
-<%@page import="BuildCars.MaluchBuilder" %>
 <%@page import="BuildCars.CarDirector" %>
 
 <%@page import=" java.util.List"%>
@@ -24,11 +23,57 @@
 <body>
 
 
+
+
+
 <%
 
 
 
-CarBuilder carBuilder = new MaluchBuilder();
+
+class MaluchBuilder implements CarBuilder
+{
+	private Car car;
+
+	public MaluchBuilder()
+	{
+		this.car = new Car();
+	}
+
+	public void buildTires()
+	{
+		
+	}
+
+	public void buildEngine()
+	{
+		
+	}
+
+	public Car getCar()
+	{
+		return car;
+	}
+}
+
+%>
+
+<%
+
+
+Tires tire = new Tires();
+tire.setDurability1(Integer.parseInt(request.getParameter("durabilityTire")));
+tire.setType(request.getParameter("typeTire"));
+
+Engine engine = new Engine();
+engine.setType(request.getParameter("typeEngine"));
+
+
+MaluchBuilder maluch = new MaluchBuilder();
+maluch.car.setTires(tire);
+maluch.car.setEngine(engine);
+
+CarBuilder carBuilder = maluch;
 CarDirector carDirector = new CarDirector(carBuilder);
 carDirector.makeCar();
 
@@ -38,8 +83,9 @@ System.out.println(car);
 
 %>
 
-
-
+	<form action="buildMaluch.jsp" method="post">
+		<input type="submit" value="back">
+	</form>
 
 
 

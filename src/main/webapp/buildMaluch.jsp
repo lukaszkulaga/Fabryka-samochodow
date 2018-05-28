@@ -8,11 +8,43 @@
 </head>
 <body>
 
+
+
+
+
+
 	<form action="Maluch.jsp" method="post">
+	
+	
+	
+	<p>choose durability tire </p>
+<input type="radio" name="durabilityTire" value="50" />50<br />
+<input type="radio" name="durabilityTire" value="60" />60<br />
+<input type="radio" name="durabilityTire" value="70" />70<br/>
+
+
+<p>choose type tire </p>
+<input type="radio" name="typeTire" value="b1" />b1<br />
+<input type="radio" name="typeTire" value="b2" />b2<br />
+<input type="radio" name="typeTire" value="b3" />b3<br/>
+
+
+<p>choose type engine </p>
+<input type="radio" name="typeEngine" value="v1" />v1<br />
+<input type="radio" name="typeEngine" value="v2" />v2<br />
+<input type="radio" name="typeEngine" value="v3" />v3<br/>
+	
+
 		<input type="submit" value="build MALUCH">
 	</form>
 
+	<form action="buildCar.html" method="post">
+		<input type="submit" value="back">
+	</form>
 
-
+	<form action="index.html" method="post">
+		<input type="submit" value="home page">
+	</form>
+	
 </body>
 </html>
